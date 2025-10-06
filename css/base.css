@@ -1,0 +1,209 @@
+/* Basic reset for consistent margins and paddings */
+           
+a {
+    color: var(--resources);
+}
+
+article {
+    display: block;
+    margin: 30px;
+    background-color: var(--foreground);
+    padding: 40px 40px;
+    border-radius: 40px;
+    color: var(--resources);
+    align-items: center;
+    width:auto;
+    max-height: 50%;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+
+}
+
+    
+blockquote {
+    background-color: var(--background);
+    border-left: 10px solid var(--admission);
+    margin: 20px 0;
+    padding: 10px 10px;
+    border-radius: 20px;
+
+}
+
+body {
+    font-family:'Helvetica';
+    overscroll-behavior: smooth;
+    background-color: var(--background);
+    background-size: cover;
+    width: 100%;
+    margin: 0;
+    
+}
+
+.body-about {
+    font-family:'Helvetica';
+    overflow: clip;
+   background-color: transparent;
+    width: 100%;
+    margin: 0;
+    
+}
+
+button-mid {
+    text-align:center;
+    vertical-align:middle;
+    margin: 40px;
+    background-color: var(--foreground);
+    padding: 20px 20px;
+    border-radius: 80px;
+    color: var(--about);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    width:25%;
+}
+
+button-left {
+    text-align:center;
+    vertical-align:left;
+    margin: 40px;
+    background-color: var(--foreground);
+    padding: 20px 20px;
+    border-radius: 80px;
+    color: var(--cartelera);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    width:25%;
+}
+
+button-right {
+    text-align:center;
+    vertical-align:right;
+    margin: 40px;
+    background-color: var(--foreground);
+    padding: 20px 20px;
+    border-radius: 80px;
+    color: var(--headline);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    width:25%;
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--other);
+}
+
+
+footer {
+    background-color: transparent;
+    color: var(--admission);
+    padding: 20px;
+    gap: 10px;
+    width: 100%; 
+}
+
+footer div {
+    background-color: var(--background);
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+
+.href {
+    font-size: 200%;
+
+}
+
+header {
+        padding: 20px;
+        font-size: 100%;
+        display:flex;
+        background-color: var(--background);
+        align-items: center;
+    
+}
+
+
+h1{
+    font-size: 110%;
+    margin: 20px 0;
+    color: var(--headline);
+    align-items: center;
+}
+h1-2{
+        font-size: 110%;
+        color: var(--about);
+        align-items: center;
+        font-weight: 900;
+        display:inline-block;
+        margin: 4%;
+        margin-top: 0;
+}
+h2{
+    font-size: 75%;
+    line-break: 8%;
+    margin: 20px 0;
+    color: var(--entradas)
+}
+h3{
+    font-size: 60%;
+    line-break: 8%;
+    margin: 0.5%;
+    color: var(--contacto);
+    display: inline-block;
+    align-items: center;
+}
+h4 {
+    font-size: 45%;
+    line-break: 8%;
+    margin: 20px 0;
+    color: var(--other);
+    align-items: center;
+}
+h5 {
+    font-size: 30%;
+    line-break: 8%;
+    margin: 20px 0;
+    color: var(--contacto);
+}
+
+img{
+    border-style: none;
+    max-block-size: 50%;
+    display: grid;
+    margin: auto;
+}
+
+.img-2{
+    border-style: none;
+    max-block-size: 50%;
+    display:grid;
+    margin: auto;
+    
+    
+}
+
+main {
+    display:grid;
+    width: 100%; 
+    gap: 1rem; /* Optional, adds space between rows/columns */
+    overflow-y:hidden; /* Enable scrolling for content */
+    scroll-behavior:auto; /* Enable smooth scrolling */
+    grid-template-columns:auto;
+    background-color: transparent;
+}
+main-about {
+    display:grid;
+    width: 100%; 
+    gap: 1rem; /* Optional, adds space between rows/columns */
+    overflow-y:clip;
+    grid-template-columns:auto;
+    background-color: transparent;
+}
+
+
+p {
+    margin:flex;
+    line-height: 1;
+    display: block;
+    font-size: 45%;
+}

@@ -1,0 +1,16 @@
+:root {
+    --background: snow; 
+    --foreground: black;
+
+    --cartel: mediumvioletred; 
+    --headline: deeppink; 
+
+    --entradas: blue; 
+    --admission: cyan;
+    
+    --about: yellow;
+    --other: lawngreen;
+
+    --contacto: red;
+    --resources: blueviolet;
+}
