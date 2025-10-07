@@ -1,0 +1,32 @@
+requerimientos
+    Informacion relacionada
+        fecha
+        lugar o lugares
+        entradas 
+        patrocinadores
+        programa, etc.
+    Especificaciones
+       • 2 páginas de HTML.
+       • Documento de diseño
+            Justificación del diseño
+                (introducción, requisitos a satisfacer, elementos de inspiración)
+            Solución
+                (paleta de color
+                tipografías
+                arquitectura de la información,
+                wireframes
+                mock-ups).
+        • Responsive Web Design.
+        • Elementos multimedia, se incluirá la información de la fuente en la bibliografía de la memoria.
+        • HTML5 con etiquetas semánticas y CSS3.
+        • Formulario correctamente maquetado y realizar validaciones sobre este mismo usando JavaScript.
+        • Menú de navegación desplegable, responsive, funcional, incluyendo la lógica necesaria con JavaScript ???.
+        • Layout adaptable con Flexbox o Grid
+        • Apartado con un componente ??? que represente los diferentes precios para las entradas del festival.
+        • Media queries
+        • Variables CSS3.
+        • Ventanas modales ???, el funcionamiento de estas ventanas será decisión del alumno/a.
+        • El proyecto subido a GitHub en un repositorio público, con los commit correctamente identificados.
+
+Toda la interactividad extra desarrollada mediante JavaScript sumará puntos en
+la parte de desarrollo e implementación.
