@@ -33,26 +33,30 @@ body {
     font-family:'Helvetica';
     overscroll-behavior: smooth;
     background-color: var(--background);
+    background-image:  url(../Assets/brochasheader.png);
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     width: 100%;
     margin: 0;
     
 }
 
-.body-about {
-    font-family:'Helvetica';
-    overflow: clip;
-   background-color: transparent;
-    width: 100%;
-    margin: 0;
-    
-}
-
-button-mid {
+button {
     text-align:center;
     vertical-align:middle;
     margin: 1em;
-    background-color: transparent;
+    background-color: var(--headline);
+    padding: 0.5em;
+    color: var(--about);
+    width:25%;
+}
+
+button-entrada {
+    text-align:center;
+    vertical-align:middle;
+    margin: 1em;
+    background-color: var(--headline);
     padding: 0.5em;
     border-radius:0.5%;
     color: var(--about);
@@ -60,29 +64,7 @@ button-mid {
     width:25%;
 }
 
-button-left {
-    text-align:center;
-    vertical-align:left;
-    margin:1em;
-    background-color: transparent;
-    padding:0.5em;
-    border-radius: 0.5%;
-    color: var(--cartelera);
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-    width:25%;
-}
 
-button-right {
-    text-align:center;
-    vertical-align:right;
-    margin: 1em;
-    background-color: transparent;
-    padding: 0.5em;
-    border-radius: 0.5%;
-    color: var(--headline);
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-    width:25%;
-}
 
 cite {
     display: block;
@@ -113,17 +95,15 @@ footer div {
 }
 
 header {
-        padding: 20px;
-        font-size: 100%;
-        display:fex;
-        background-color: transparent;
-        align-items: center;
-        min-height: calc(100vh - 3em);
-        background-image: url(../img/nuevoedificio.jpeg);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+    border-bottom: 2px solid var(--other);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: block;
 }
+
 
 
 
@@ -132,6 +112,13 @@ h1{
     margin: 20px 0;
     color: var(--headline);
     align-items: center;
+}
+
+headerh1 > a {
+    color: var(--headline);
+}
+h1 > a {
+    color: var(--headline);
 }
 
 h2{
@@ -179,7 +166,7 @@ img{
 }
 
 main {
-    display:grid;
+    display:flex;
     width: 100%; 
     gap: 1rem; 
     overflow-y:hidden; 
@@ -192,8 +179,9 @@ main {
 #menu {
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: var(--foreground);
     z-index: 1;
+    width: 100%;
 }
 
 #menu > ul > li {
