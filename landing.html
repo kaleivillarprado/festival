@@ -14,35 +14,47 @@
   </head>  
 
 <body>
-<!-- Top menu -->
-  <header class="header">
-    <div class="header_content">
-    <span><nav id="menu">
-        <h1>Maraña Creation Fest</h1>
-            <li><a href="#entradas"><button class="entradas" type="button">entradas</button></a></li>
-            <li><a href="#programa"><button class="programacion" type="button">programación</button></a></li>
-            <li><a href="#about"><button class="about" type="button">about</button></a></li>
-            <li><a href="#contacto"><button class="contacto" type="button">contacto</button></a></li>
-      </span></nav>
-    </div>
-    </nav>
-        
-       
+
+ <header>
+  <nav id="menu">
+            <div>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+                <ul>
+                    <li>
+                        <a href="#entradas" onclick="closeMenu()">entradas</a>
+                    </li>
+                    <li>
+                        <a href="#programacion" onclick="closeMenu()">programación</a>
+                    </li>
+                    <li>
+                        <a href="#about" onclick="closeMenu()">about</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                    </li>
+                </ul>
+            </div>
+            
+            <h1>
+                <a href="#"><span class="logo"><strong>maraña</strong></span></a>
+            </h1>
+        </nav>
+    <article>
+            <h1>
+                <a > maraña creation fest</a>
+            </h1>
+            <ul>
+            <a href="#entradas"><button class="entradas" type="button"> entradas</button></a>
+            <a href="#programa"><button class="programacion" type="button">programación</button></a>
+            <a href="#about"><button class="about" type="button">about</button></a>
+            <a href="#contacto"><button class="contacto" type="button">contacto</button></a>
+            </ul>
+    </article>
   </header>
  
-  
-<!-- !PAGE CONTENT! -->
-
-    <main>
-    <h1>Webs de referencia</h1>
-    <a href="https://heystudio.es/opensource/">Hey Studio Barcelona</a>
-    <a href="https://secretrisoclub.com/">Hey Studio Barcelona</a>
-    <a href="https://translash.org/resources/">Trans Lash</a>
-    <a href="https://www.schwulesmuseum.de/?lang=en">Schwules Museum</a>
-    <a href="https://www.grrrlzinefair.com/">GRRRL ZINE FAIR</a>
+ 
   
 
-  </main>
   
   <!-- Footer -->
   <footer>
