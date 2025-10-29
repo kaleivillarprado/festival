@@ -118,6 +118,11 @@ cite {
     color: var(--other);
 }
 
+div > article
+{
+  background-color: var(--background);
+}
+
 footer {
     background-color: transparent;
     color: var(--admission);
@@ -175,8 +180,10 @@ h3 {
 }
 .noviembre {
     color: var(--other);
-    background-color: var(--background);
-    width: auto;
+    width: 100%;
+    font-style: italic;
+    padding: 0.5em;
+    margin: 1em;
 }
 
 h4 {
@@ -200,6 +207,7 @@ img {
     display:grid;
     margin: auto;    
 }
+
 
 main {
     display:block;
@@ -266,3 +274,28 @@ p {
   border-left: 10px solid var(--resources);
 }
 
+/*carrusel*/
+
+.carrusel-texto {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.carrusel-texto .slide {
+  animation:infinite 90s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+}
+}
