@@ -1,14 +1,27 @@
            
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 a {
     color: var(--resources);
 }
 
+a > h4 {
+  color: var(--resources);
+  text-decoration: none;
+  text-align: center;
+}
+
 article {
-    display:flex;
+    display:block;
     margin: 30px;
     background-color: var(--foreground);
     padding: 40px 40px;
-    border-radius: 40px;
+    border-radius: 0;
     color: var(--resources);
     align-items: center;
     width:auto;
@@ -19,19 +32,67 @@ article {
 
     
 blockquote {
-    background-color: var(--background);
-    border-left: 10px solid var(--admission);
-    margin: 20px 0;
-    padding: 10px 10px;
-    border-radius: 20px;
-
+  background-color: var(--foreground);
+  margin: 5%;
+  padding: 10px;
+  border-radius: 0;
+  text-align: left;
+  color: var(--background);
+  font-size: 1.5em;
+  display: flex;
+  flex: 1 1 calc(33.333% - 1rem);
+  flex-direction: column;
+  border: 0.2em solid;
 }
 
+blockquote > h2 {
+  text-align: center;
+}
+
+/*botonera*/
+.button-entradas {
+    border-color: var(--admission)
+}
+.button-entradas > li > a > h4 {
+  color: var(--admission);
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-programacion {
+    border-color: var(--headline)
+}
+.button-programacion > li > a > h4 {
+  color: var(--headline);
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-about {
+    color:var(--about);
+    border-color: var(--about)
+}
+.button-about > li >a > h4 {
+  color: var(--about);
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-contacto {
+    color:var(--contacto);
+    border-color: var(--contacto)
+}
+.button-contacto > li > a > h4 {
+  color: var(--contacto);
+  text-decoration: none;
+  text-align: center;
+}
+
+
 body {
-    font-family:'Helvetica';
+    font-family:'Space Grotesk', sans-serif;
     overscroll-behavior: smooth;
-    background-color: var(--background);
-    background-image:  url(../Assets/brochasheader.png);
+    background-color: var(--foreground);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -50,15 +111,12 @@ button {
 
 }
 
-
-
 cite {
     display: block;
     margin-top: 10px;
     font-size: 0.9em;
     color: var(--other);
 }
-
 
 footer {
     background-color: transparent;
@@ -81,78 +139,70 @@ footer > div {
 }
 
 header {
-
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    padding: 20px;
-    align-items: center;
-    
+  padding: 1em;
+  font-size: 100%;
+  display: block;
+  align-items: center;
+  background: transparent;
+  top: 0;
 }
 
-
-
-h1{
-    font-size: 2em;
-    margin: 20px 0;
-    color: var(--headline);
-    align-items: center;
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-anchor: none;
 }
 
-header> h1 > a {
-    color: var(--headline);
+h1 {
+  font-size: 4em;
+  margin: 2% 0;
+  color: var(--resources);
+  align-items: center;
 }
 
+h2 {
+  font-size: 3em;
+  margin: 20px 0;
+  color: var(--foreground);
+}
 
-h2{
-    font-size: 1em;
-    line-break: 8%;
-    margin: 20px 0;
-    color: var(--entradas)
+h3 {
+  font-size: 2em;
+  margin: 0.5%;
+  color: var(--resources);
+  display: inline-block;
+  text-align: left;
 }
-h3{
-    font-size: 60%;
-    line-break: 8%;
-    margin: 0.5%;
-    color: var(--contacto);
-    display: inline-block;
-    align-items: center;
-}
-h4 {
-    font-size: 45%;
-    line-break: 8%;
-    margin: 20px 0;
+.noviembre {
     color: var(--other);
-    align-items: center;
-}
-h5 {
-    font-size: 30%;
-    line-break: 8%;
-    margin: 20px 0;
-    color: var(--contacto);
+    background-color: var(--background);
+    width: auto;
 }
 
-img{
-    border-style: none;
-    max-block-size: 50%;
-    display: grid;
-    margin: auto;
+h4 {
+  font-size: 1.5em;
+  margin: 0.5%;
+  color: var(--foreground);
+  align-items: center;
+}
+
+img {
+  border-style: none;
+  max-block-size: 70%;
+  display: block;
+  margin: auto;
+  width: auto;
 }
 
 .img-2{
     border-style: none;
     max-block-size: 50%;
     display:grid;
-    margin: auto;
-    
-    
+    margin: auto;    
 }
 
 main {
-    display:flex;
+    display:block;
     width: 100%; 
     gap: 1rem; 
     overflow-y:hidden; 
@@ -162,7 +212,7 @@ main {
 }
 
 #menu {
-    position: absolute;
+    position: sticky;
     bottom: 0;
     width: 100%;
     height: 3em;
@@ -172,8 +222,22 @@ main {
     padding: 0 1em;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-decoration: none;
+  display: flex;
+}
 
-
+nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 20%;
+  display: flex;
+  justify-items: center;
+  text-decoration: none;
+}
 
 p {
     margin:flex;
@@ -181,3 +245,24 @@ p {
     display: block;
     font-size: 45%;
 }
+
+#entradas > blockquote {
+  background-color: var(--headline);
+  border-left: 10px solid var(--resources);
+}
+
+#about > blockquote {
+  background-color: var(--about);
+  border-left: 10px solid var(--resources);
+}
+
+#contacto > blockquote {
+  background-color: var(--contacto);
+  border-left: 10px solid var(--background);
+}
+
+#entradas> blockquote {
+  background-color: var(--admission);
+  border-left: 10px solid var(--resources);
+}
+
