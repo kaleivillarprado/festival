@@ -1,9 +1,19 @@
-           
+ :root { 
+  --distancia-iconos: 1rem;
+  --tamano-texto-menu: 2rem;
+ }
 .space-grotesk {
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
 }
 
 a {
@@ -14,6 +24,12 @@ a > h4 {
   color: var(--resources);
   text-decoration: none;
   text-align: center;
+}
+
+a,
+i {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 article {
@@ -118,6 +134,14 @@ cite {
     color: var(--other);
 }
 
+div{
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
 div > article
 {
   background-color: var(--background);
@@ -144,13 +168,17 @@ footer > div {
 }
 
 header {
-  padding: 1em;
+  padding: 1rem;
   font-size: 100%;
   display: block;
   align-items: center;
   background: transparent;
   top: 0;
+  height: 100vh;
+  flex-direction: column;
+    justify-content: center;
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -178,18 +206,12 @@ h3 {
   display: inline-block;
   text-align: left;
 }
-.noviembre {
-    color: var(--other);
-    width: 100%;
-    font-style: italic;
-    padding: 0.5em;
-    margin: 1em;
-}
+
 
 h4 {
   font-size: 1.5em;
   margin: 0.5%;
-  color: var(--foreground);
+  color: var(--background);
   align-items: center;
 }
 
@@ -198,7 +220,7 @@ img {
   max-block-size: 70%;
   display: block;
   margin: auto;
-  width: auto;
+   width: 100%;
 }
 
 .img-2{
@@ -208,6 +230,10 @@ img {
     margin: auto;    
 }
 
+.intro {
+  color: var(--background)
+
+}
 
 main {
     display:block;
@@ -219,15 +245,123 @@ main {
     background-color: transparent;
 }
 
+/*menús*/
 #menu {
     position: sticky;
-    bottom: 0;
-    width: 100%;
-    height: 3em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1em;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    padding: 3rem 0;
+    background-color: transparent;
+    transition-duration: 1s;
+}
+
+#menu > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+    position: sticky;
+}
+
+.menu-icon {
+    position: fixed;
+    top: var(--distancia-iconos);
+    left: var(--distancia-iconos);
+    font-size: 2rem;
+    color: var(--resources);
+}
+
+#menu > ul:last-child >  {
+    position: absolute;
+    right: var(--distancia-iconos);
+    top: var(--distancia-iconos);
+}
+
+/*modales*/
+#modal-imagen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(176, 41, 255, 0.596);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-imagen > figure {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#modal-imagen > figure > * {
+    width: 40%;
+    max-width: 600px;
+    object-fit: cover;
+}
+
+#modal-imagen > figure > img {
+    position: relative;
+    filter: grayscale(100%);    
+    box-shadow: rgb(235, 18, 170, 0.5) 1rem 1rem 1rem;
+}
+
+#modal-imagen > i,
+#modal-entradas > i {
+    position: absolute;
+    top: 1rem;
+    right:1rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+#modal-entradas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--resources);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-entradas > div {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--entradas);
+}
+
+#modal-entradas > div > h2 {
+    font-size: 2em;
+}
+
+#modal-entradas > div > p,
+#modal-entradas > div > ul > li {
+    font-size: 1.2em;
+}
+
+#modal-entradas > div > ul > li > strong {
+    font-weight: bold;
+}
+
+#modal-entradas > div > h2,
+#modal-entradas > div > p,
+#modal-entradas > div > ul {
+    margin: 1rem 0;
 }
 
 nav {
@@ -247,11 +381,28 @@ nav > ul {
   text-decoration: none;
 }
 
+.noviembre {
+    color: var(--other);
+    width: 100%;
+    font-style: italic;
+    padding: 0.5em;
+    margin: 1em;
+}
+
 p {
-    margin:flex;
-    line-height: 1;
+    margin:1rem;
+    line-height: 1.5rem;
     display: block;
-    font-size: 45%;
+    font-size: 1em;
+    color: var(--resources);
+}
+
+section {
+    min-height: 100vh;
+    padding: 3em 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #entradas > blockquote {
@@ -274,28 +425,127 @@ p {
   border-left: 10px solid var(--resources);
 }
 
-/*carrusel*/
 
-.carrusel-texto {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+/*
+
+pasted
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+#historia > div {
+    display: flex;
+    justify-content: space-between;
 }
 
-.slide {
-  width: 100%;
-  white-space: nowrap;
+#historia > div > * {
+    width: 40%;
+    align-self: center;
 }
 
-.carrusel-texto .slide {
-  animation:infinite 90s;
+.galeria {
+    display: flex;
+    justify-content: space-between;
 }
 
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
+.galeria > figure {
+    width: 30%;
+    border: var(--borde);
+    transition: 0.5s;
 }
+
+.galeria > figure > img {
+    filter: grayscale(100%);
+}
+
+.galeria > figure:hover {
+    box-shadow: grey 1rem 1rem 1rem;
+    cursor: pointer;
+}
+
+.galeria > figure > figcaption {
+    display: none;
+}
+
+section > form > label {
+    display: none;
+}
+
+#masinfo > form {
+    width: 100%;
+    max-width: 600px;
+}
+
+#masinfo > form > input,
+#masinfo > form > select {
+    width: 100%;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+#masinfo > form > input[type=submit],
+#modal-entradas > div > button {
+    width: auto;
+    margin: 0 auto;
+    padding: 1em;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: var(--color-primario);
+    border: var(--color-primario) 1px solid;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#coste {
+    font-weight: bold;
+}
+
+
+
+
+@media screen and (max-width: 850px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    #historia  > div {
+        flex-direction: column;
+    }
+
+    #historia  > div > * {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .galeria {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .galeria > figure {
+        width: 100%;
+    }
+
+    #modal-imagen > figure {
+        flex-direction: column;
+    }
+
+    #modal-imagen > figure > * {
+        width: 100%;
+    }
 }
