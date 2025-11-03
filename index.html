@@ -27,11 +27,43 @@
     <i class="fa-solid fa-bars"></i>
   </div>
  <header>
-    <section class="carrusel-texto" id="landing">
-      <div class="slide">
+    <section id="landing">
+      <div>
+        <video autoplay muted loop id="cover-animation">
+          <source src="assets/cover-animation.mp4" type="video/mp4">
+        </video>
         <h1>Maraña Creation Fest</h1>
-      <h3 class="noviembre">noviembre 2026 noviembre 2026 noviembre 2026 noviembre 2026 noviembre 2026 </h3>
+        <h3 class="noviembre">noviembre 2026</h3>
+        
       </div>
+      <div id="variety">
+        <figure>
+          <blockquote class="button-entradas"><li><a href="#entradas"><h4>Entradas</h4></a></li></blockquote>
+            <blockquote class="button-programacion"><li><a href="#programacion"><h4>Programación</h4></a></li> </blockquote>
+            <blockquote class="button-about"><li><a href="#about"><h4>About</h4></a></li></blockquote>
+            <blockquote class="button-contacto"><li><a href="#contacto"><h4>Contacto</h4></a></li></blockquote>
+        </figure>
+         <figure>
+                <img src="img/foto.png" alt="Persona">
+            </figure>
+          <figure onmouseover="cambiaFoto('1')" onmouseout="restauraFoto()">
+            <img src="assets/imgs/pasteup-texture.jpg" alt="">
+            <figcaption>
+              <h3>Experimentación Textil por Guadiana</h3>
+            </figcaption>
+          </figure>
+          <figure onmouseover="cambiaFoto('2')" onmouseout="restauraFoto()">
+            <img src="assets/imgs/tempmap-man.jpg" alt="">
+            <figcaption>
+              <h3>Experimentación textil por Zoe</h3>
+            </figcaption>
+          </figure>
+          <figure onmouseover="cambiaFoto('3')" onmouseout="restauraFoto()">
+            <img src="assets/imgs/vivid-flowers.jpg" alt="">
+              <figcaption>
+                <h3>Experimentación textil por Dani</h3>
+              </figcaption>
+            </div>
     </section>
    
     <div>
@@ -52,11 +84,36 @@
   <div>
       <div class="intro">
         <h4 data-aos="fade-up"> De manera contínua Colectiva Maraña se prepara para morfear a un espacio de creación, conexión y comunidad, lo que viene a ser: una maraña.</h4>
-           <h4 data-aos="fade-up">La proyección disciplinaria de la colectiva se divide en tres grandes ámbitos: producción, mediación e investigación.</h4>
       </div>
-      <figure data-aos="flip-left">
+    </section>
+    <section id="textiles">
+        <h2>Exploraciones textiles de miembros Maraña</h2>
+          <div>
+          <figure onclick="abrirModal(this)"  data-aos="zoom-in">
+            <img src="assets/imgs/guaditextil.jpg" alt="">
+            <figcaption>
+              <h3>Experimentación Textil por Guadiana</h3>
+            </figcaption>
+          </figure>
+          <figure onclick="abrirModal(this)"  data-aos="zoom-in">
+            <img src="assets/imgs/zoetextil.jpg" alt="">
+            <figcaption>
+              <h3>Experimentación textil por Zoe</h3>
+            </figcaption>
+          </figure>
+          <figure onclick="abrirModal(this)"  data-aos="zoom-in">
+            <img src="assets/imgs/danitextil.jpg" alt="">
+              <figcaption>
+                <h3>Experimentación textil por Dani</h3>
+              </figcaption>
+            </div>
+        </section>
+
+      
+      <aside><figure data-aos="flip-left">
         <img src="assets/imgs/brochasheader.png" alt="Portada del CD de la Suite Iberia interpretada por Alicia de Larrocha">
       </figure>
+      </aside>
     </div>
     </section>
     

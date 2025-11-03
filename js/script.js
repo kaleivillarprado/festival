@@ -128,3 +128,23 @@ window.onload = function () {
         duration: 1500
     });
 };
+
+function cambiaFoto(seccion) {
+    "use strict";
+    var fotos = document.getElementById("variety").lastElementChild.children;
+    console.log("cambiaFoto. Seccion=" + seccion);
+    for (var i = 0; i < fotos.length; i = i + 1) {
+        fotos[i].style.opacity = "0";
+    }
+    var foto = fotos[seccion];
+    foto.style.opacity = "1";
+}
+
+
+/*
+ * Vuelve a poner la foto inicial
+ */
+function restauraFoto() {
+    "use strict";
+    cambiaFoto("0");
+}

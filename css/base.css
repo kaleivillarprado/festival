@@ -32,6 +32,9 @@ i {
     cursor: pointer;
 }
 
+.about-title {
+    color: var(--about);
+}
 article {
     display:block;
     margin: 30px;
@@ -134,8 +137,21 @@ cite {
     color: var(--other);
 }
 
+#cover-animation {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
+
+#disciplinas > div > * {
+    width: 100%;
+    align-self: justify;
+}
+
 div{
-  flex-direction: column;
   width: 100%;
   gap: 1rem;
   display: flex;
@@ -145,6 +161,14 @@ div{
 div > article
 {
   background-color: var(--background);
+}
+
+figcaption {
+    padding: 10px;
+    text-align: center;
+    background-color: var(--foreground);
+    color: var(--resources);
+    font-size: 40%;
 }
 
 footer {
@@ -162,23 +186,91 @@ footer > div {
     display: block;
 }
 
+/*galeria*/
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.galeria > figure {
+    width: 30%;
+    transition: 0.5s;
+    background:var(--foreground);
+}
+
+.galeria > figure:hover {
+    box-shadow: rgba(115, 29, 228, 0.671) 1rem 1rem 1rem;
+    cursor: pointer;
+}
+
 .href {
     font-size: 200%;
 
 }
-
+ /*header*/
 header {
   padding: 1rem;
   font-size: 100%;
-  display: block;
+  display: flex;
+  position: relative;
   align-items: center;
   background: transparent;
   top: 0;
   height: 100vh;
   flex-direction: column;
-    justify-content: center;
+  justify-content: center;
 }
 
+header > section{
+    display: block
+}
+header > section > div {
+    display: block;
+}
+
+header > section > div > #variety {
+    display: flex;
+}
+header > section > div > #variety > figure > blockquote > li{
+    list-style: none;
+    display: flex;
+}
+header > section > div > h1{
+    font-size: 6rem;
+    color: var(--resources);
+    mix-blend-mode: color-burn;
+}
+header > section > div > h3{
+    color: var(--contacto);
+    align-items: center;
+    font-style: italic;
+}
+header > section >div > h1, h3 {
+    align-items: center;
+}
+
+#variety{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    width: 100%;
+    min-height: calc(100vh - 6em);
+    
+}
+
+#variety > div {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding: 2em 0;
+}
+
+#variety > div > figure {
+    width: 100%;
+    position: relative;
+}
 
 html {
   scroll-behavior: smooth;
@@ -191,12 +283,14 @@ h1 {
   margin: 2% 0;
   color: var(--resources);
   align-items: center;
+  font-weight: 800;
 }
 
 h2 {
   font-size: 3em;
   margin: 20px 0;
   color: var(--foreground);
+  font-weight: 600;
 }
 
 h3 {
@@ -235,19 +329,41 @@ img {
 
 }
 
+
 main {
     display:block;
     width: 100%; 
     gap: 1rem; 
     overflow-y:hidden; 
     scroll-behavior:auto; 
-    grid-template-columns:auto;
     background-color: transparent;
 }
 
-/*menús*/
+/*menú*/
+#entradas > blockquote {
+  background-color: var(--headline);
+  border-left: 10px solid var(--resources);
+}
+
+#about > blockquote {
+  background-color: var(--about);
+  border-left: 10px solid var(--resources);
+}
+
+#contacto > blockquote {
+  background-color: var(--contacto);
+  border-left: 10px solid var(--background);
+}
+
+#programacion > blockquote {
+  background-color: var(--admission);
+  border-left: 10px solid var(--resources);
+}
+
+.fa-solid.fa-xmark {
+    color: var(--resources)}
 #menu {
-    position: sticky;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -257,8 +373,10 @@ main {
     height: 100vh;
     z-index: 1;
     padding: 3rem 0;
-    background-color: transparent;
     transition-duration: 1s;
+    min-height: calc(100vh - 6em);
+    background-color: var(--foreground);
+   
 }
 
 #menu > ul {
@@ -269,6 +387,7 @@ main {
     padding: 0;
     list-style: none;
     position: sticky;
+    justify-content: center;
 }
 
 .menu-icon {
@@ -292,7 +411,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(176, 41, 255, 0.596);
+    background-color: rgba(176, 41, 255, 0.2);
     display: none;
     justify-content: center;
     align-items: center;
@@ -381,13 +500,6 @@ nav > ul {
   text-decoration: none;
 }
 
-.noviembre {
-    color: var(--other);
-    width: 100%;
-    font-style: italic;
-    padding: 0.5em;
-    margin: 1em;
-}
 
 p {
     margin:1rem;
@@ -401,29 +513,45 @@ section {
     min-height: 100vh;
     padding: 3em 15%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+}
+ /*textiles*/
+#textiles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    width: 100%;
+    min-height: calc(100vh - 6em);
+    background-image: url(../assets/imgs/swirl-purple.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
-#entradas > blockquote {
-  background-color: var(--headline);
-  border-left: 10px solid var(--resources);
+#textiles > div {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding: 2em 0;
 }
 
-#about > blockquote {
-  background-color: var(--about);
-  border-left: 10px solid var(--resources);
+#textiles > div > figure {
+    width: 100%;
+    position: relative;
 }
 
-#contacto > blockquote {
-  background-color: var(--contacto);
-  border-left: 10px solid var(--background);
+#textiles > h2 {
+    color: var(--background);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    mix-blend-mode:color-dodge;
+    z-index: 2;
 }
 
-#entradas> blockquote {
-  background-color: var(--admission);
-  border-left: 10px solid var(--resources);
-}
+
+
 
 
 /*
@@ -432,50 +560,12 @@ pasted
 
 */
 
-
-
-
-
-
-
-
-
-
-
-
-#historia > div {
-    display: flex;
-    justify-content: space-between;
+@media screen and (max-width: 1600px) {
+    #textiles {
+        flex-direction: row;
+    }
 }
 
-#historia > div > * {
-    width: 40%;
-    align-self: center;
-}
-
-.galeria {
-    display: flex;
-    justify-content: space-between;
-}
-
-.galeria > figure {
-    width: 30%;
-    border: var(--borde);
-    transition: 0.5s;
-}
-
-.galeria > figure > img {
-    filter: grayscale(100%);
-}
-
-.galeria > figure:hover {
-    box-shadow: grey 1rem 1rem 1rem;
-    cursor: pointer;
-}
-
-.galeria > figure > figcaption {
-    display: none;
-}
 
 section > form > label {
     display: none;
