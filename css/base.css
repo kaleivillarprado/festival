@@ -112,9 +112,6 @@ body {
     font-family:'Space Grotesk', sans-serif;
     overscroll-behavior: smooth;
     background-color: var(--foreground);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     width: 100%;
     margin: 0;
     
@@ -129,6 +126,7 @@ button {
     color: var(--about);
 
 }
+
 
 cite {
     display: block;
@@ -222,20 +220,52 @@ header {
   justify-content: center;
 }
 
-header > section{
-    display: block
-}
-header > section > div {
-    display: block;
+#home-disciplinas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    width: 100%;
+
 }
 
-header > section > div > #variety {
+#home-disciplinas > div {
+    width: 100%;
+    margin: auto;
     display: flex;
+    padding: 2em 0;
 }
-header > section > div > #variety > figure > blockquote > li{
-    list-style: none;
-    display: flex;
+
+#home-disciplinas > div > figure {
+    width: 100%;
+    position: relative;
 }
+
+#home-disciplinas > h2 {
+    color: var(--resources);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+    mix-blend-mode: multiply;
+    z-index: 2;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-weight: 550;
+  color: var(--contacto);
+  mix-blend-mode: lighten;
+  font-size: 3em;
+}
+
+header > section > div > figure > blockquote > li > h4{
+    text-align: center;
+}
+
 header > section > div > h1{
     font-size: 6rem;
     color: var(--resources);
@@ -248,28 +278,6 @@ header > section > div > h3{
 }
 header > section >div > h1, h3 {
     align-items: center;
-}
-
-#variety{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    width: 100%;
-    min-height: calc(100vh - 6em);
-    
-}
-
-#variety > div {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    padding: 2em 0;
-}
-
-#variety > div > figure {
-    width: 100%;
-    position: relative;
 }
 
 html {
@@ -324,10 +332,16 @@ img {
     margin: auto;    
 }
 
-.intro {
-  color: var(--background)
-
+.intro{
+ display:block;
+  color: var(--other);
 }
+.outro{
+ display:block;
+  color: var(--other);
+  text-align: right;
+}
+
 
 
 main {
@@ -512,7 +526,7 @@ p {
 section {
     min-height: 100vh;
     padding: 3em 15%;
-    display: flex;
+    display: block;
     justify-content: space-between;
 }
  /*textiles*/
@@ -560,12 +574,6 @@ pasted
 
 */
 
-@media screen and (max-width: 1600px) {
-    #textiles {
-        flex-direction: row;
-    }
-}
-
 
 section > form > label {
     display: none;
@@ -599,43 +607,4 @@ section > form > label {
 
 #coste {
     font-weight: bold;
-}
-
-
-
-
-@media screen and (max-width: 850px) {
-    h1 {
-        font-size: 4rem;
-    }
-
-    h2 {
-        font-size: 5vw;
-    }
-
-    #historia  > div {
-        flex-direction: column;
-    }
-
-    #historia  > div > * {
-        width: 100%;
-        gap: 1rem;
-    }
-
-    .galeria {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .galeria > figure {
-        width: 100%;
-    }
-
-    #modal-imagen > figure {
-        flex-direction: column;
-    }
-
-    #modal-imagen > figure > * {
-        width: 100%;
-    }
 }
