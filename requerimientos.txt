@@ -1,6 +1,6 @@
 requerimientos
     Informacion relacionada
-        fecha
+    DONE fecha  
         lugar o lugares
         entradas 
         patrocinadores
@@ -18,13 +18,13 @@ requerimientos
                 mock-ups).
         • Responsive Web Design.
         • Elementos multimedia, se incluirá la información de la fuente en la bibliografía de la memoria.
-        • HTML5 con etiquetas semánticas y CSS3.
+     DONE HTML5 con etiquetas semánticas y CSS3.
         • Formulario correctamente maquetado y realizar validaciones sobre este mismo usando JavaScript.
         • Menú de navegación desplegable, responsive, funcional, incluyendo la lógica necesaria con JavaScript ???.
         • Layout adaptable con Flexbox o Grid
         • Apartado con un componente ??? que represente los diferentes precios para las entradas del festival.
         • Media queries
-        • Variables CSS3.
+     DONE  Variables CSS3.
         • Ventanas modales ???, el funcionamiento de estas ventanas será decisión del alumno/a.
         • El proyecto subido a GitHub en un repositorio público, con los commit correctamente identificados.
 

@@ -33,11 +33,11 @@
           <source src="assets/cover-animation.mp4" type="video/mp4">
         </video>
         <h1>Maraña Creation Fest</h1>
-        <h3>noviembre 2026</h3><figure>
+        <h3>noviembre 2026</h3>
       </div>
       
      <div id="home-disciplinas">
-        <h2>Disciplinas</h2>
+       
           <div>
           <figure onclick="abrirModal(this)"  data-aos="zoom-in" >
             <h4 class="centered">INVESTIGACIÓN</h4>
@@ -53,7 +53,7 @@
           </figure>
             </div>
           </div>
-   
+   </section>
     <div>
     <nav class="menu" id="menu">
         <ul>
@@ -61,44 +61,51 @@
             <blockquote class="button-programacion"><li><a href="#programacion" onclick="closeMenu()"><h4>Programación</h4></a></li> </blockquote>
             <blockquote class="button-about"><li><a href="#about" onclick="closeMenu()"><h4>About</h4></a></li></blockquote>
             <blockquote class="button-contacto"><li><a href="#contacto"><h4>Contacto</h4></a></li></blockquote>
-        </ul>
-        <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+      </ul>
     </nav>
     </div>
 </header>
 
 <main>
-  <section>
+  <section id="intro-outro">
   <div>
       <div class="intro">
         <h2 data-aos="fade-up"> De manera contínua Colectiva Maraña se prepara para morfear a un espacio de creación, conexión y comunidad.</h2>
+        <h2 data-aos="fade-up" class="outro"> Lo que viene a ser: una maraña.</h2>
       </div>
-      <div class="outro">
-        <h2 data-aos="fade-up"> Lo que viene a ser: una maraña.</h2>
-      </div>
-    </section>
+  </div>
+  </section>
     <section id="textiles">
         <h2>Exploraciones textiles de miembros Maraña</h2>
-          <div>
+          <div class="galeria">
+            <figure onclick="abrirModal(this)"  data-aos="zoom-in">
+              <img src="assets/imgs/guaditextil.jpg" alt="">
+              <figcaption>
+                <h3>Experimentación Textil por Guadiana</h3>
+              </figcaption>
+            </figure>
           <figure onclick="abrirModal(this)"  data-aos="zoom-in">
-            <img src="assets/imgs/guaditextil.jpg" alt="">
-            <figcaption>
-              <h3>Experimentación Textil por Guadiana</h3>
-            </figcaption>
-          </figure>
-          <figure onclick="abrirModal(this)"  data-aos="zoom-in">
-            <img src="assets/imgs/zoetextil.jpg" alt="">
-            <figcaption>
-              <h3>Experimentación textil por Zoe</h3>
-            </figcaption>
+              <img src="assets/imgs/zoetextil.jpg" alt="">
+              <figcaption>
+                <h3>Experimentación textil por Zoe</h3>
+              </figcaption>
           </figure>
           <figure onclick="abrirModal(this)"  data-aos="zoom-in">
             <img src="assets/imgs/danitextil.jpg" alt="">
               <figcaption>
                 <h3>Experimentación textil por Dani</h3>
               </figcaption>
-            </div>
-        </section>
+              </figure>
+        </div>
+    </section>
+    <div id="modal-imagen">
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <i class="fa-solid fa-xmark" onclick="cerrarModal()"></i>
+        </div>
 
       
     

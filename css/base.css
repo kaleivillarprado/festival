@@ -153,20 +153,12 @@ div{
   width: 100%;
   gap: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
 }
 
 div > article
 {
   background-color: var(--background);
-}
-
-figcaption {
-    padding: 10px;
-    text-align: center;
-    background-color: var(--foreground);
-    color: var(--resources);
-    font-size: 40%;
 }
 
 footer {
@@ -187,19 +179,22 @@ footer > div {
 /*galeria*/
 .galeria {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .galeria > figure {
     width: 30%;
     transition: 0.5s;
-    background:var(--foreground);
 }
 
+
 .galeria > figure:hover {
-    box-shadow: rgba(115, 29, 228, 0.671) 1rem 1rem 1rem;
+    box-shadow: rgba(148, 46, 216, 0.555) 1rem 1rem 1rem;
     cursor: pointer;
+}
+
+.galeria > figure > figcaption {
+    display: none;
 }
 
 .href {
@@ -215,9 +210,25 @@ header {
   align-items: center;
   background: transparent;
   top: 0;
+  bottom: 0;
   height: 100vh;
   flex-direction: column;
   justify-content: center;
+}
+
+header > section > div > h1{
+    font-size: 6rem;
+    color: var(--resources);
+    
+}
+
+header > section > div > h3{
+    color: var(--contacto);
+    align-items: center;
+    font-style: italic;
+}
+header > section >div > h1, h3 {
+    align-items: center;
 }
 
 #home-disciplinas{
@@ -225,13 +236,12 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    width: 100%;
 
 }
 
 #home-disciplinas > div {
     width: 100%;
-    margin: auto;
+    margin: 1em;
     display: flex;
     padding: 2em 0;
 }
@@ -242,14 +252,11 @@ header {
 }
 
 #home-disciplinas > h2 {
-    color: var(--resources);
+    color: var(--contacto);
     text-align: center;
     width: 100%;
-    margin-bottom: 1em;
-    mix-blend-mode: multiply;
     z-index: 2;
 }
-
 .centered {
   position: absolute;
   top: 50%;
@@ -259,25 +266,7 @@ header {
   font-weight: 550;
   color: var(--contacto);
   mix-blend-mode: lighten;
-  font-size: 3em;
-}
-
-header > section > div > figure > blockquote > li > h4{
-    text-align: center;
-}
-
-header > section > div > h1{
-    font-size: 6rem;
-    color: var(--resources);
-    mix-blend-mode: color-burn;
-}
-header > section > div > h3{
-    color: var(--contacto);
-    align-items: center;
-    font-style: italic;
-}
-header > section >div > h1, h3 {
-    align-items: center;
+  font-size: 2em
 }
 
 html {
@@ -288,7 +277,7 @@ html {
 
 h1 {
   font-size: 4em;
-  margin: 2% 0;
+  margin: 1rem;
   color: var(--resources);
   align-items: center;
   font-weight: 800;
@@ -296,8 +285,8 @@ h1 {
 
 h2 {
   font-size: 3em;
-  margin: 20px 0;
-  color: var(--foreground);
+  margin: 1rem;
+  color: var(--background);
   font-weight: 600;
 }
 
@@ -332,17 +321,21 @@ img {
     margin: auto;    
 }
 
+#intro-outro  {
+    background-image: url(../assets/imgs/swirl-green.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: calc(100vh - 6em);
+    display: block;
+}
 .intro{
+ width: 80%;
  display:block;
   color: var(--other);
+  mix-blend-mode: hard-light;
 }
-.outro{
- display:block;
-  color: var(--other);
-  text-align: right;
-}
-
-
 
 main {
     display:block;
@@ -419,34 +412,55 @@ main {
 }
 
 /*modales*/
+figcaption {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--foreground);
+    color: var(--resources);
+    font-size: 1rem;
+}
+
 #modal-imagen {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(176, 41, 255, 0.2);
+    width: 100vw;
+    height: 100vh;
+    min-height: calc(100vh - 6em);
+    background-image: url(../assets/imgs/swirl-purple.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     display: none;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 #modal-imagen > figure {
-    width: 70%;
+    width: 40%;
     display: flex;
     justify-content: space-around;
-}
+    margin: 1rem;
+    align-items: center;
 
-#modal-imagen > figure > * {
+}
+#modal-imagen > figure > figcaption{
     width: 40%;
-    max-width: 600px;
-    object-fit: cover;
 }
 
-#modal-imagen > figure > img {
-    position: relative;
-    filter: grayscale(100%);    
-    box-shadow: rgb(235, 18, 170, 0.5) 1rem 1rem 1rem;
+#modal-imagen > i{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.5rem;
+    color:var(--background);
+    cursor: pointer;
+    max-width: 90vw;
+    max-height: 80vh;
 }
 
 #modal-imagen > i,
@@ -503,6 +517,7 @@ nav {
   z-index: 1;
   text-decoration: none;
   display: flex;
+  
 }
 
 nav > ul {
@@ -525,16 +540,15 @@ p {
 
 section {
     min-height: 100vh;
-    padding: 3em 15%;
+    padding: 3em;
     display: block;
-    justify-content: space-between;
+    
 }
  /*textiles*/
 #textiles{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
     width: 100%;
     min-height: calc(100vh - 6em);
     background-image: url(../assets/imgs/swirl-purple.jpg);
@@ -561,8 +575,13 @@ section {
     width: 100%;
     margin-bottom: 2rem;
     mix-blend-mode:color-dodge;
-    z-index: 2;
 }
+
+#textiles > figure > img:hover {
+    box-shadow: rgba(115, 29, 228, 0.671) 1rem 1rem 1rem;
+    cursor: pointer;
+}
+
 
 
 

@@ -1,53 +1,30 @@
-/**
- * Abre el menú
- */
+/*menu*/
 function openMenu() {
     console.log("Función openMenu");
-    // Busca el elemento con id "menu", accede a su primer hijo y luego al último hijo de ese elemento
-    // Cambia left a 0 para que se despace hacia la derecha y sea visible
     document.getElementById("menu").style.left = "0";
 }
 
 
-/**
- * Cierra el menú
- */
 function closeMenu() {
     console.log("Función closeMenu");
-    // Busca el elemento con id "menu", accede a su primer hijo y luego al último hijo de ese elemento
-    // Cambia left a -100% para que se desplace hacia la izquierda y no sea visible
     document.getElementById("menu").style.left = "-100%";
 }
 
-
-/**
- * Busca el elemento con id "modal" y lo oculta estableciendo su estilo de display a "none"
- */
 function cerrarModal() {
     document.getElementById("modal-imagen").style.display = "none";
 }
-
 /**
  * Abre la ventana modal mostrando la imagen y el pie de foto del elemento figure pasado como parámetro.
  * @param figure Elemento figure sobre el que se ha hecho clic
  */
 function abrirModal(figure) {
-    // Se busca la ventana modal y sus elementos internos
-    // La ventana modal se busca por su id
     var modal = document.getElementById("modal-imagen");
-    // El img y el figcaption se buscan como el primer img y el primer figcaption dentro del elemento con id "modal"
     var modalImg = modal.querySelector("img");
     var modalCaption = modal.querySelector("figcaption");
-
-    // Se actualizan la imagen y el pie de foto de la ventana modal con los del figure clicado
-    // y se asignan a los de la ventana modal
     modalImg.src = figure.querySelector("img").src;
     modalCaption.innerHTML = figure.querySelector("figcaption").innerHTML;
-
-    // Se muestra la ventana modal, cambiando el display de "none" a "flex"
-    modal.style.display = "flex";
+    modal.style.display = "block";
 }
-
 
 /**
  * Calcula el coste de las entradas
