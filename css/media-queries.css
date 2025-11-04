@@ -1,11 +1,28 @@
-@media screen and (max-width: 1600px) {
+@media screen and (min-width: 1200px) {
+    #menu {
+        display: flex
+    }
     #textiles {
         flex-direction: row;
     }
 }
 
+
+@media screen and (max-width: 1199px) {
+    #menu {
+        display: block;
+    }
+}
 @media screen and (max-width: 850px) {
    
+    #home-discplinas  > div {
+        flex-direction: column;
+    }
+
+    #home-displinas  > div > figure {
+        width: 100%;
+        gap: 1rem;
+    }
 
     #textiles  > div {
         flex-direction: column;
@@ -24,3 +41,7 @@
         width: 100%;
     }
 }
+
+
+
+

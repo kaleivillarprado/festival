@@ -1,10 +1,10 @@
 requerimientos
     Informacion relacionada
     DONE fecha  
-        lugar o lugares
+    DONE lugar o lugares
         entradas 
-        patrocinadores
-        programa, etc.
+    DONE  patrocinadores
+    DONE  programa, etc.
     Especificaciones
        • 2 páginas de HTML.
        • Documento de diseño
@@ -20,12 +20,12 @@ requerimientos
         • Elementos multimedia, se incluirá la información de la fuente en la bibliografía de la memoria.
      DONE HTML5 con etiquetas semánticas y CSS3.
         • Formulario correctamente maquetado y realizar validaciones sobre este mismo usando JavaScript.
-        • Menú de navegación desplegable, responsive, funcional, incluyendo la lógica necesaria con JavaScript ???.
-        • Layout adaptable con Flexbox o Grid
+     DONE Menú de navegación desplegable, responsive, funcional, incluyendo la lógica necesaria con JavaScript ???.
+     DONE Layout adaptable con Flexbox o Grid
         • Apartado con un componente ??? que represente los diferentes precios para las entradas del festival.
         • Media queries
      DONE  Variables CSS3.
-        • Ventanas modales ???, el funcionamiento de estas ventanas será decisión del alumno/a.
+     DONE  Ventanas modales ???, el funcionamiento de estas ventanas será decisión del alumno/a.
         • El proyecto subido a GitHub en un repositorio público, con los commit correctamente identificados.
 
 Toda la interactividad extra desarrollada mediante JavaScript sumará puntos en

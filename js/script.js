@@ -10,13 +10,11 @@ function closeMenu() {
     document.getElementById("menu").style.left = "-100%";
 }
 
+/*modal imagen*/
 function cerrarModal() {
     document.getElementById("modal-imagen").style.display = "none";
 }
-/**
- * Abre la ventana modal mostrando la imagen y el pie de foto del elemento figure pasado como parámetro.
- * @param figure Elemento figure sobre el que se ha hecho clic
- */
+
 function abrirModal(figure) {
     var modal = document.getElementById("modal-imagen");
     var modalImg = modal.querySelector("img");

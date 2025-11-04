@@ -77,6 +77,11 @@ blockquote > h2 {
   text-decoration: none;
   text-align: center;
 }
+.button-entradas:hover  > li > a> h4{
+    background-color: var(--admission);
+    color: var(--foreground);
+}
+
 
 .button-programacion {
     border-color: var(--headline)
@@ -86,6 +91,11 @@ blockquote > h2 {
   text-decoration: none;
   text-align: center;
 }
+.button-programacion:hover > li > a> h4{
+    background-color: var(--headline);
+    color: var(--foreground);
+}
+
 
 .button-about {
     color:var(--about);
@@ -96,18 +106,26 @@ blockquote > h2 {
   text-decoration: none;
   text-align: center;
 }
+.button-about:hover > li > a> h4{
+    background-color: var(--about);
+    color: var(--foreground);
+}
 
 .button-contacto {
     color:var(--contacto);
     border-color: var(--contacto)
 }
+
 .button-contacto > li > a > h4 {
   color: var(--contacto);
   text-decoration: none;
   text-align: center;
 }
 
-
+.button-contacto:hover > li > a> h4{
+    background-color: var(--contacto);
+    color: var(--foreground);
+}
 body {
     font-family:'Space Grotesk', sans-serif;
     overscroll-behavior: smooth;
@@ -170,7 +188,6 @@ footer {
 }
 
 footer > div {
-    background-color: var(--background);
     padding: 10px;
     text-align: center;
     display: block;
@@ -195,6 +212,16 @@ footer > div {
 
 .galeria > figure > figcaption {
     display: none;
+}
+
+.patrocinadores {
+    display: flex;
+    justify-content: space-between;
+}
+
+.patrocinadores > figure {
+    width: 30%;
+    transition: 0.5s;
 }
 
 .href {
@@ -230,6 +257,7 @@ header > section > div > h3{
 header > section >div > h1, h3 {
     align-items: center;
 }
+
 
 #home-disciplinas{
     display: flex;
@@ -321,21 +349,15 @@ img {
     margin: auto;    
 }
 
-#intro-outro  {
-    background-image: url(../assets/imgs/swirl-green.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    min-height: calc(100vh - 6em);
-    display: block;
-}
 .intro{
- width: 80%;
- display:block;
   color: var(--other);
-  mix-blend-mode: hard-light;
+  mix-blend-mode:normal;
+  display: block
 }
+.marana{
+    color: var(--resources);
+}
+
 
 main {
     display:block;
@@ -351,17 +373,14 @@ main {
   background-color: var(--headline);
   border-left: 10px solid var(--resources);
 }
-
 #about > blockquote {
   background-color: var(--about);
   border-left: 10px solid var(--resources);
 }
-
 #contacto > blockquote {
   background-color: var(--contacto);
   border-left: 10px solid var(--background);
 }
-
 #programacion > blockquote {
   background-color: var(--admission);
   border-left: 10px solid var(--resources);
@@ -383,9 +402,7 @@ main {
     transition-duration: 1s;
     min-height: calc(100vh - 6em);
     background-color: var(--foreground);
-   
 }
-
 #menu > ul {
     width: 100%;
     height: 100%;
@@ -396,6 +413,11 @@ main {
     position: sticky;
     justify-content: center;
 }
+#menu > ul:last-child >  {
+    position: absolute;
+    right: var(--distancia-iconos);
+    top: var(--distancia-iconos);
+}
 
 .menu-icon {
     position: fixed;
@@ -403,22 +425,35 @@ main {
     left: var(--distancia-iconos);
     font-size: 2rem;
     color: var(--resources);
+    mix-blend-mode: multiply;
 }
 
-#menu > ul:last-child >  {
-    position: absolute;
-    right: var(--distancia-iconos);
-    top: var(--distancia-iconos);
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-decoration: none;
+  display: flex;
+}
+nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 20%;
+  display: flex;
+  justify-items: center;
+  text-decoration: none;
 }
 
 /*modales*/
 figcaption {
-    display: block;
+    display: flex;
     padding: 1rem;
     text-align: center;
     background-color: var(--foreground);
     color: var(--resources);
     font-size: 1rem;
+    margin: 1rem;
+    width: 100%;
 }
 
 #modal-imagen {
@@ -511,23 +546,7 @@ figcaption {
     margin: 1rem 0;
 }
 
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  text-decoration: none;
-  display: flex;
-  
-}
 
-nav > ul {
-  list-style: none;
-  margin: 0;
-  padding: 20%;
-  display: flex;
-  justify-items: center;
-  text-decoration: none;
-}
 
 
 p {
