@@ -162,6 +162,19 @@ cite {
   z-index: -1;
 }
 
+#dias {
+    display: flex;
+    justify-content: space-between;
+}
+
+#dias > div > figure {
+    width: auto;
+    transition: 0.5s;
+}
+#dias > div > figure > h4{
+    color: var(--admission);
+}
+
 #disciplinas > div > * {
     width: 100%;
     align-self: justify;
@@ -604,33 +617,24 @@ section {
 
 
 
-
-
-/*
-
-pasted
-
-*/
-
-
 section > form > label {
     display: none;
 }
 
-#masinfo > form {
+#tickets > form {
     width: 100%;
     max-width: 600px;
 }
 
-#masinfo > form > input,
-#masinfo > form > select {
+#tickets > form > input,
+#tickets > form > select {
     width: 100%;
     margin: 0.5em 0;
     padding: 0.5em;
     border-radius: 5px;
 }
 
-#masinfo > form > input[type=submit],
+#tickets > form > input[type=submit],
 #modal-entradas > div > button {
     width: auto;
     margin: 0 auto;

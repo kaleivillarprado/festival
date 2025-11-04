@@ -42,11 +42,11 @@ function costeTotal() {
             break;
         //Caso de actividad con valor a2
         case "a2":
-            precio = 5;
+            precio = 20;
             break;
         //Caso de actividad con valor a3
         case "a3":
-            precio = 10;
+            precio = 40;
             break;
     }
     document.getElementById("coste").innerHTML = (numero * precio) + "€";
@@ -68,11 +68,11 @@ function comprar() {
 
     //El nombre de la actividad dependerá del value seleccionado
     if (actividad_value === "a1") {
-        actividad = "Concierto didáctico";
+        actividad = "Entrada de Sábado";
     } else if (actividad_value === "a2") {
-        actividad = "Visita a la Fundación";
+        actividad = "Entrada de Domingo";
     } else {
-        actividad = "Visionado del documental";
+        actividad = "Entrada Fin de Semana";
     }
 
     //Se añaden los valores en la ventana modal

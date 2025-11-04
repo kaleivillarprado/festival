@@ -1,0 +1,123 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<html>
+    <head>
+      <title>Maraña Creation Fest</title>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" width="100%">
+    <link rel="stylesheet" href="css\index.css">
+    <link rel="icon" type="image/png" sizes="android-chrome-192x192" href="Assets/Favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="android-chrome-512x512" href="/Assets/Favicons/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="apple-touch-icon" href="Assets/Favicons/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script src="js/script.js"></script>
+        <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>  
+
+<body>
+  <div class="menu-icon" onclick="openMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+ <header>
+    <section id="landing">
+      <div id="cover">
+        <video autoplay muted loop id="cover-animation">
+          <source src="assets/cover-animation.mp4" type="video/mp4">
+        </video>
+        <h1><a href="url">link text</a>Maraña Creation Fest</h1>
+        <h3>con la participación de Creative Mornings Madrid</h3>
+      </div>
+        <div id="dias">
+          <div>
+          <figure onclick="abrirModal(this)"  data-aos="zoom-in" >
+            <h4 class="centered">SÁBADO CREATIVO PLÁSTICO</h4>
+            <img src="assets/imgs/vivid-flowers.jpg" alt="Sábado Plástico Flores Desenfocadas" >
+          </figure>
+          <figure  onclick="abrirModal(this)"  data-aos="zoom-in">
+            <h4 class="centered">DOMINGO CREATIVO PERFORMÁTICO</h4>
+            <img src="assets/imgs/tempmap-man.jpg" alt="Domingo Performance Mapa Temperatura">
+          </figure>
+          <figure  onclick="abrirModal(this)"  data-aos="zoom-in">
+            <h4 class="centered">FIN DE SEMANA COMPLETO</h4>
+            <img src="assets/imgs/tape.jpg" alt="Fin de Semana Pasteup">
+          </figure>
+      </div>
+      <nav class="menu" id="menu">
+        <ul>
+            <blockquote class="button-entradas"><li><a href="#entradas" onclick="closeMenu()"><h4>Entradas</h4></a></li></blockquote>
+            <blockquote class="button-programacion"><li><a href="#programacion" onclick="closeMenu()"><h4>Programación</h4></a></li> </blockquote>
+            <blockquote class="button-about"><li><a href="#about" onclick="closeMenu()"><h4>About</h4></a></li></blockquote>
+            <blockquote class="button-contacto"><li><a href="#contacto"><h4>Contacto</h4></a></li></blockquote>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+      </ul>
+    </nav>
+    </section>
+</header>
+<main>
+    <section>
+    <div>
+        <div class="spots" data-aos="fade-up">
+        <ul>
+          <h2><li>2 exposiciones colectivas</li></h2>
+          <h2><li>3 convocatorias</li></h2>
+          <h2><li>5 becas</li></h2>
+        <h2 data-aos="fade-up" class="marana"> Mucha creación, una maraña.</h2>
+
+        </ul>
+        </div>
+    </div>
+    </section>
+    <section id="tickets">
+        <div>
+            <h2>Entradas</h2>
+            <p>El acceso al espacio es libre, sin embargo; para todas las actividades es necesario adquirir una entrada.</p>
+            <form onsubmit="return comprar()">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" placeholder="Correo electrónico" required>
+                <label for="actividad">Actividad:</label>
+                <select id="actividad" onchange="costeTotal()" required>
+                    <option value="a1">Entrada de Sábado</option>
+                    <option value="a2">Entrada de Domingo</option>
+                    <option value="a3">Entrada Fin de Semana</option>
+                </select>
+                <label for="numero">Número de entradas:</label>
+                <input type="number" id="numero" min="1" max="6" placeholder="Número de entradas" onchange="costeTotal()" required>
+                <p>Coste de las entradas: <span id="coste"></span></p>
+                <input type="submit" value="Comprar entradas">
+            </form>
+        </div>
+    </section>
+    
+</main> 
+<footer>
+    <div>
+       <div class="patrocinadores" >
+            <figure>
+              <img src="assets/imgs/logo-matadero.png" alt="Logo Matadero Madrid">
+            </figure>
+            <figure>
+              <img src="assets/imgs/logo-sakura.png" alt="Logo Sakura Pigma Micron">
+            </figure>
+            <figure>
+              <img src="assets/imgs/logo-talens.png" alt="Logo Royal Talens">
+            </figure>
+            <figure>
+              <img src="assets/imgs/logo-tb21.png" alt="Logo Thyssen Bornemisza 21 Academy">
+            </figure>
+            <figure>
+              <img src="assets/imgs/logo-writersmadrid.png" alt="Logo Writers Madrid">
+            </figure>
+      </div>
+    </div>
+  </footer>
+  </body>
